@@ -1,0 +1,95 @@
+/* 🌌 Header Container */
+.header {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    border-radius: 16px;
+    padding: 16px 24px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .header:hover {
+    box-shadow: 0 10px 40px rgba(0, 198, 255, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  /* 🌍 DApp Title */
+  .header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #00c6ff, #007bff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.5px;
+    margin: 0;
+  }
+  
+  /* 🔗 Wallet Section */
+  .wallet-section {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  
+  /* 🪙 Connect Button */
+  .connect-btn {
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+    transition: all 0.3s ease;
+    font-size: 15px;
+  }
+  
+  .connect-btn:hover {
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.6);
+    transform: scale(1.05);
+  }
+  
+  /* 💳 Wallet Address Display */
+  .wallet-address {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 10px 16px;
+    border-radius: 10px;
+    color: #00c6ff;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    font-family: monospace;
+    border: 1px solid rgba(0, 198, 255, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .wallet-address:hover {
+    background: rgba(0, 198, 255, 0.1);
+    box-shadow: 0 0 8px rgba(0, 198, 255, 0.4);
+  }
+  
+  /* 📱 Responsive Design */
+  @media (max-width: 600px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+  
+    .wallet-section {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    .connect-btn {
+      flex-grow: 1;
+      text-align: center;
+    }
+  }
+  

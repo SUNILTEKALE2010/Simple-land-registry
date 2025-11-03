@@ -1,0 +1,66 @@
+[
+    {
+      "inputs": [
+        { "internalType": "string", "name": "_landId", "type": "string" },
+        { "internalType": "string", "name": "_ownerName", "type": "string" },
+        { "internalType": "string", "name": "_ownerContact", "type": "string" }
+      ],
+      "name": "registerLand",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [{ "internalType": "string", "name": "_landId", "type": "string" }],
+      "name": "getLandDetails",
+      "outputs": [
+        { "internalType": "string", "name": "landId", "type": "string" },
+        { "internalType": "string", "name": "ownerName", "type": "string" },
+        { "internalType": "string", "name": "ownerContact", "type": "string" },
+        { "internalType": "address", "name": "ownerAddress", "type": "address" },
+        { "internalType": "bool", "name": "isRegistered", "type": "bool" }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        { "internalType": "string", "name": "_landId", "type": "string" },
+        { "internalType": "address", "name": "_newOwner", "type": "address" },
+        { "internalType": "string", "name": "_newOwnerName", "type": "string" },
+        { "internalType": "string", "name": "_newOwnerContact", "type": "string" }
+      ],
+      "name": "transferLand",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [{ "internalType": "string", "name": "_landId", "type": "string" }],
+      "name": "isLandRegistered",
+      "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        { "indexed": true, "internalType": "string", "name": "landId", "type": "string" },
+        { "indexed": false, "internalType": "string", "name": "ownerName", "type": "string" },
+        { "indexed": true, "internalType": "address", "name": "owner", "type": "address" }
+      ],
+      "name": "LandRegistered",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        { "indexed": true, "internalType": "string", "name": "landId", "type": "string" },
+        { "indexed": true, "internalType": "address", "name": "oldOwner", "type": "address" },
+        { "indexed": true, "internalType": "address", "name": "newOwner", "type": "address" }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    }
+  ]
+  
